@@ -8,8 +8,7 @@ function(abundances, subsample = 0)
   
   if(is.vector(abundances) & is.numeric(abundances))
   {
-  	if(!subsample == 0) abundances <- .sample_abundances(abundances, subsample)
-  	mydata <- create_octaves(abundances)
+  	mydata <- create_octaves(abundances, subsample)
   } else {
   	if(is.data.frame(abundances))
   	{
@@ -30,7 +29,7 @@ function(abundances, subsample = 0)
   }
   
   logLik <- -val[[2]]
-  attr(logLik, "df") <- 2
+  attr(logLik, "df") <- 1
   attr(logLik, "nobs") <- nrow(mydata)
   class(logLik) <- "logLik"
   res$logLik <- logLik

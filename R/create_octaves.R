@@ -1,6 +1,7 @@
 create_octaves <-
-function(abundances)  
+function(abundances, subsample = 0)  
 {
+	if(!subsample == 0) abundances <- .sample_abundances(abundances, subsample)
   stopifnot(is.numeric(abundances))
   abundances = abundances[abundances > 0]     # remove zeros
   octs = floor(sapply(abundances, log2))

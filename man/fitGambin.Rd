@@ -40,7 +40,7 @@
 
 }
 
-\details{ The gambin distribution is fit to the number of species in abundance octaves, as specified by the \code{create_octaves} function. Because the shape of species abundance distributions depend on sample size, abundances of different communities should be compared on equally large samples. The sample size can be set by the \code{subsample} parameter. 
+\details{ The gambin distribution is fit to the number of species in abundance octaves, as specified by the \code{create_octaves} function. Because the shape of species abundance distributions depend on sample size, abundances of different communities should be compared on equally large samples. The sample size can be set by the \code{subsample} parameter. To estimate \code{alpha} from a standardised sample, the function must be run several times; see the examples. 
 	The \code{plot} method creates a barplot showing the observed number of species in octaves, with the fitted GamBin distribution shown as black dots.
 	}
 \value{
@@ -64,6 +64,11 @@ data(moths)
 fit <- fitGambin(moths) 
 plot(fit)
 summary(fit)
+
+# based on a standardized level of 200 individuals
+stand_fit <- replicate(20, fitGambin(moths, 1000)$Alpha) #may take a while on slower computers
+print(c(mean = mean(stand_fit), sd = sd(stand_fit)))
+
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

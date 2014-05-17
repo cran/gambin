@@ -14,8 +14,8 @@ function(object, ...)
 
   res$logLik <- object$logLik
   
-  compare <- cbind(object$Data$species, object$fitted.values)
-  suppressWarnings(res$ChiSq <- chisq.test(compare)[1:3])
+  chiprobs <- object$fitted.values/sum(object$fitted.values)
+  suppressWarnings(res$ChiSq <- chisq.test(object$Data$species, p = chiprobs))
   
   attr(res, "nobs") <- nrow(res$Data)
   class(res) <- "summary.gambin"

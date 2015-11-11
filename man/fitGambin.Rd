@@ -51,7 +51,7 @@
 }
 \references{
 Ugland, K.I., Lambshead, F.J.D., McGill, B.J., Gray, J.S., O'Dea, N., Ladle, R.J. & Whittaker, R.J. (2007). Modelling dimensionality in species abundance distributions: description and evaluation of the Gambin model. Evolutionary Ecology Research, 9, 313-324.\cr
-Matthews, T.J., Borregaard, M.K., Ugland, K., Borges, P.A.V., Rigal, F. & Whittaker, R.J. (submitted MS). Maximum likelihood methods for fitting the Gambin model reveals a superior fit to empirical species-abundance distributions. }
+Matthews, T.J., Borregaard, M.K., Ugland, K., Borges, P.A.V., Rigal, F. & Whittaker, R.J. (Early View Online). The gambin model provides a superior fit to species abundance distributions with a single free parameter: evidence, implementation and interpretation. Ecography, DOI: 10.1111/ecog.00861 }
 \author{Michael K. Borregaard, Thomas J. Matthews & Karl I. Ugland}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -65,7 +65,7 @@ fit <- fitGambin(moths)
 plot(fit)
 summary(fit)
 
-# based on a standardized level of 200 individuals
+# gambin parameters based on a standardized sample size of 1000 individuals
 stand_fit <- replicate(20, fitGambin(moths, 1000)$Alpha) #may take a while on slower computers
 print(c(mean = mean(stand_fit), sd = sd(stand_fit)))
 

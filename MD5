@@ -1,4 +1,4 @@
-97f7bfc35dde870874fc0899830a3f86 *DESCRIPTION
+ed47666b741851233abdfdc2b507aff0 *DESCRIPTION
 87b282c220ae10529b4dd7894a699f5f *NAMESPACE
 b39c7afda52c16f4b0c9a48520ae0121 *R/AIC.gambin.R
 4e2d37783e1183e7d64335ad9b5306e7 *R/AICc.R
@@ -7,8 +7,8 @@ bb0b37ac4c899ae989c4ff0cbad7949c *R/BIC.gambin.R
 9471f3fc68f03f626cadc57060698d70 *R/confint.gambin.R
 5428cd841f09b3c912524f1c852082ca *R/create_octaves.R
 779d716054febd0b5341dc3867c7e69c *R/dgambin.R
-791d405f75b8ee5057273ee2fb27c983 *R/fitGambin.R
-4296897e52a6f6780d0808954cda45c7 *R/gambin-internal.R
+12f0b7d5390a051fa6ed06480d610bc1 *R/fitGambin.R
+b5e2e434a46ea1dc83f9391214a4ea7b *R/gambin-internal.R
 e76039f3e95af343d205d76d40e1098d *R/gambin_exp.R
 fd3ab25ff837ef99b2226644f4e523f5 *R/logLik.gambin.R
 bfb2ce94ac5677f20a3cf5a239199b6a *R/nobs.gambin.R
@@ -20,8 +20,8 @@ e6c68c05bd5713e4f2182cf1c070d25d *R/print.summary.gambin.R
 bde5fb41cd0ac6329f42eb63c2c062bf *data/moths.rda
 828a5c0fed2ed6736321c2a15fc3eaa8 *inst/CITATION
 5539349ec96a4be3775efb66e5972a4b *man/create_octaves.Rd
-058c3b0264ac9ecaf13f62fde2224128 *man/dgambin.Rd
+fb5e03093a3db1ceca2d1de57e9aaf68 *man/dgambin.Rd
 47390d104e307491bf39b7b28ae7aca8 *man/fitGambin.Rd
-4084bbd90f3b399c24e7bd94ef5f8f1c *man/gambin-package.Rd
+ff6eb67fba39591da2b75be702bacbdb *man/gambin-package.Rd
 720d72506b8f34ec099b2270ed6b8911 *man/logLik.gambin.Rd
 68abbea9755a2eeb1403c88751b53204 *man/moths.Rd

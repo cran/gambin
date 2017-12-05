@@ -1,3 +1,7 @@
+## Version 2.2.0
+
+  * Adding a new dataset (Brazilian flies)
+  
 ## Version 2.1.0
 
   * Adding support for mixture models

@@ -1,4 +1,11 @@
 
+## Version 2.4.0
+
+  * Bug fix: confidence intervals for alpha 
+  * New tests included
+  * Adding a new 'deconstruct_modes' function to enable more in depth analysis of a multimodal gambin model fit
+  * Confidence intervals for multi-component gambin model parameters
+
 ## Version 2.3.0
 
   * Adding a new 'mult_abundances' function to fit gambin to muliple sites and calculate standardised alpha
@@ -15,6 +22,7 @@
 
   * Code refactored
   * Create r/q/p/d gambin functions
+  * Number of considered free parameters increased from 1 to 2
   * Created an initial vignette.
   * Created an initial test suite
   * Hooked up to travis and codecov

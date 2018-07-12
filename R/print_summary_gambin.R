@@ -1,7 +1,7 @@
 #' @export
 print.summary.gambin = function(x, ...) 
 {
-  cat("GamBin distribution fit\n")
+  cat("Gambin distribution fit\n")
   cat("Data: ")
   cat(x$Dataname)
   cat("\n\n")
@@ -12,14 +12,22 @@ print.summary.gambin = function(x, ...)
     rownames(vals) = paste0("alpha", seq_along(x$Alpha))
     cat("Coefficients:\n")
     print(vals)
+    cat("\n")
   } else {
-    cat("Unable to compute CI for more than 1 component")
-    cat("Alpha\t")
+    cat("Alpha:\t")
     cat(x$alpha)
     cat("\n\n")
+    if (length(x$ConfInt95) == 1){
+      cat("No confidence intervals calculated", "\n\n")
+    } else {
+      cat("Confidence intervals:", "\n")
+      print(x$ConfInt95)
+      cat("\n\n")
+    }
+
   }
 
-  cat("MaxOctave\t")
+  cat("MaxOctave:\t")
   cat(floor(x$octaves))
   
   cat("\n\n")

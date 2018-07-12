@@ -15,7 +15,7 @@ The gambin distribution is a sample distribution based on a stochastic model of 
 and has been demonstrated to fit empirical data better than the most commonly used species-abundance models 
 (see references). Gambin is a stochastic model which combines the gamma distribution with a binomial sampling method. 
 To fit the gambin distribution, the abundance data is first binned into octaves. The expected abundance 
-octave of a species is given by the number of successfull consecutive Bernoulli 
+octave of a species is given by the number of successful consecutive Bernoulli 
 trials with a given parameter \code{p}. The parameter \code{p} of species is assumed to distributed 
 according to a gamma distribution. This approach can be viewed as linking the gamma distribution with 
 the probability of success in a binomial process with x trials. Use the \code{fit_abundances()} function to fit the 
@@ -25,7 +25,7 @@ and the alpha values standardised by the number of individuals).The package esti
 associated confidence intervals. Methods are provided for plotting the results, and for calculating the likelihood of fits.
 
 The package now provides functionality to fit multimodal gambin distributions (i.e. a gambin distribution with 
-more than one mode).
+more than one mode), and to deconstruct and examine a multimodal gambin model fit (\code{deconstruct_modes}).
 }
 \examples{
 data(moths, package = "gambin")

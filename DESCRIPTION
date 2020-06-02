@@ -1,7 +1,7 @@
 Package: gambin
 Type: Package
 Title: Fit the Gambin Model to Species Abundance Distributions
-Version: 2.4.3
+Version: 2.4.4
 Authors@R: c(person(given="Thomas", family="Matthews", email="txm676@gmail.com",
     role = c("aut", "cre")), person(given=c("Michael", "Krabbe"), 
     family="Borregaard", email="mkborregaard@snm.ku.dk", role = "aut"), 
@@ -23,11 +23,11 @@ RoxygenNote: 7.0.2
 VignetteBuilder: knitr
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2020-02-03 16:34:54 UTC; matthetj
+Packaged: 2020-06-02 11:41:55 UTC; Tom
 Author: Thomas Matthews [aut, cre],
   Michael Krabbe Borregaard [aut],
   Karl Ugland [aut],
   Colin Gillespie [aut]
 Maintainer: Thomas Matthews <txm676@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-02-03 19:30:06 UTC
+Date/Publication: 2020-06-02 12:00:17 UTC

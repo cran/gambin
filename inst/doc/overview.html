@@ -19,41 +19,67 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 
 </style>
 <script>
@@ -80,7 +106,189 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
-<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
 
 
 
@@ -99,86 +307,90 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>The gambin distribution is a sample distribution based on a stochastic model of species abundances, and has been demonstrated to fit empirical data better than the most commonly used species-abundance distribution (SAD) models (see <span class="citation">Thomas J Matthews et al. (2014)</span> and <span class="citation">Ugland et al. (2007)</span>). Gambin is a stochastic model which combines the gamma distribution with a binomial sampling method. To fit the gambin distribution, the abundance data is first binned into octaves using a simple log2 transform that doubles the number of abundance classes within each octave. Thus, octave 0 contains the number of species with 1 individual, octave 1 the number of species with 2 or 3 individuals, octave 2 the number of species with 4 to 7 individuals, and so forth (method 3 in <span class="citation">J. S. Gray, Bjorgesaeter, and Ugland (2006)</span>).</p>
+<p>The gambin distribution is a sample distribution based on a stochastic model of species abundances, and has been demonstrated to fit empirical data better than the most commonly used species-abundance distribution (SAD) models (see <span class="citation">Matthews et al. (2014)</span> and <span class="citation">Ugland et al. (2007)</span>). Gambin is a stochastic model which combines the gamma distribution with a binomial sampling method. To fit the gambin distribution, the abundance data is first binned into octaves using a simple log2 transform that doubles the number of abundance classes within each octave. Thus, octave 0 contains the number of species with 1 individual, octave 1 the number of species with 2 or 3 individuals, octave 2 the number of species with 4 to 7 individuals, and so forth (method 3 in <span class="citation">Gray, Bjorgesaeter, and Ugland (2006)</span>).</p>
 <p>The gambin distribution is flexible, meaning it can fit a variety of empirical SAD shapes (including lognormal and logseries-like shapes), and that the distribution shape (in the context of the unimodal gambin model) is adequately characterised by the model’s single parameter (α): low values of alpha indicate logserieslike SADs, and high alpha values indicate lognormal-like SADs. As such, the alpha parameter can be used as a metric to compare the shape of SADs from different ecological communities; for example, along an environmental gradient (e.g <span class="citation">Arellano et al. (2017)</span>)</p>
-<p>The expected abundance octave of a species is given by the number of successfull consecutive Bernoulli trials with a given parameter <span class="math inline">\(p\)</span>. The parameter <span class="math inline">\(p\)</span> of species is assumed to distributed according to a gamma distribution. This approach can be viewed as linking the gamma distribution with the probability of success in a binomial process with <span class="math inline">\(x\)</span> trials. Use the fit_abundances() function to fit the gambin model to a vector of species abundances, optionally using a subsample of the individuals. The package estimates the alpha (shape) parameter with associated confidence intervals. Methods are provided for plotting the results, and for calculating the likelihood of fits.</p>
-<p>It has become increasingly apparent that many empirical SADs are in fact multimodal (<span class="citation">Antao et al. (2017)</span>). As such, recent work has focused on expanding the standard unimodal gambin model to allow it to fit distributions with multiple modes (<span class="citation">Thomas J. Matthews et al. (2019)</span>). For example, the bimodal gambin model can be calculated as the integration of two gambin distributions. The corresponding likelihood function for the bimodal gambin model contain’s four parameters: the shape parameters for the first and second group, the max octave of the first group (as this is allowed to vary), and one splitting parameter (split) representing the fraction of objects in the first group.It is relatively straightforward to extend the above approach for fitting the bimodal gambin model by maximum likelihood, to fitting gambin models with g modes. For each additional mode, a further three parameters are needed: the additional alpha, max octave and split parameters (see <span class="citation">Thomas J. Matthews et al. (2019)</span>). Use the fit_abundances() function in combination with the no_of_components of argument. The default is no_of_components = 1, which fits the standard unimodal gambin model. no_of_components = 2, fits the bimodal gambin model, and so on. As the optimisation procedure takes long with no_of_components &gt; 1, it is possible to use the cores argument within fit_abundances to make use of parallel processing in the maximum likelihood optimisation.</p>
+<p>The expected abundance octave of a species is given by the number of successfull consecutive Bernoulli trials with a given parameter <span class="math inline">\(p\)</span>. The parameter <span class="math inline">\(p\)</span> of species is assumed to distributed according to a gamma distribution. This approach can be viewed as linking the gamma distribution with the probability of success in a binomial process with <span class="math inline">\(x\)</span> trials. Use the fit_abundances() function to fit the gambin model to a vector of species abundances, optionally using a subsample of the individuals. The package estimates the alpha (shape) parameter with associated confidence intervals. Methods are provided for plotting the results, and for calculating the likelihood of fits. The summary() function provides the confidence intervals around alpha, and also the results of a X2 goodness of fit test. Prior to package version 2.4.4, we simply used the default degrees of freedom in this test (i.e. number of data points - 1). This is not optimal as the degrees of freedom should arguably also include the number of parameters used to fit the gambin model itself. As such, in version 2.4.4 we have edited the degrees of freedom to reflect this. One problem is that the chisq.test() function in R does not have an argument for setting the degrees of freedom; thus, we have had to use a workaround. As a result of this change, X2 results generated using older versions of the package will differ slightly from those using 2.4.4 and later.</p>
+<p>It has become increasingly apparent that many empirical SADs are in fact multimodal (<span class="citation">Antao et al. (2017)</span>). As such, recent work has focused on expanding the standard unimodal gambin model to allow it to fit distributions with multiple modes (<span class="citation">Matthews et al. (2019)</span>). For example, the bimodal gambin model can be calculated as the integration of two gambin distributions. The corresponding likelihood function for the bimodal gambin model contain’s four parameters: the shape parameters for the first and second group, the max octave of the first group (as this is allowed to vary), and one splitting parameter (split) representing the fraction of objects in the first group.It is relatively straightforward to extend the above approach for fitting the bimodal gambin model by maximum likelihood, to fitting gambin models with g modes. For each additional mode, a further three parameters are needed: the additional alpha, max octave and split parameters (see <span class="citation">Matthews et al. (2019)</span>). Use the fit_abundances() function in combination with the no_of_components of argument. The default is no_of_components = 1, which fits the standard unimodal gambin model. no_of_components = 2, fits the bimodal gambin model, and so on. As the optimisation procedure takes long with no_of_components &gt; 1, it is possible to use the cores argument within fit_abundances to make use of parallel processing in the maximum likelihood optimisation.</p>
 <p>The deconstruct_modes() function can then be used to examine a multimodal gambin model fit. The function provides the location of the modal octaves of each component distribution and (if species classification data are provided) determines the proportion of different types of species in each octave.</p>
-<p>Often the aim of SAD studies is to compare the form of the SAD across different sites / samples. The alpha parameter of the one component gambin model (alpha) has been found to provide a useful metric in this regard. Use the mult_abundances function to calculate alpha values for a set of different samples / sites. However, because the alpha parameter of the gambin model is dependent on sample size, when comparing the alpha values between sites it can be useful to first standardise the number of individuals in all sites. By default, the mult_abundances function calculates the total number of individuals in each site and selects the minimum value for standardising. This minimum number of individuals is then sampled from each site and the gambin model fitted to this subsample and the alpha value stored. This process is then repeated N times and the mean alpha value is calculated for each site.</p>
+<p>Often the aim of SAD studies is to compare the form of the SAD across different sites / samples. The alpha parameter of the one component gambin model (alpha) has been found to provide a useful metric in this regard. Use the mult_abundances() function to calculate alpha values for a set of different samples / sites. However, because the alpha parameter of the gambin model is dependent on sample size, when comparing the alpha values between sites it can be useful to first standardise the number of individuals in all sites. By default, the mult_abundances() function calculates the total number of individuals in each site and selects the minimum value for standardising. This minimum number of individuals is then sampled from each site and the gambin model fitted to this subsample and the alpha value stored. This process is then repeated N times and the mean alpha value is calculated for each site.</p>
 <div id="example" class="section level2">
 <h2>Example</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;gambin&quot;</span>)
-<span class="kw">data</span>(moths, <span class="dt">package=</span><span class="st">&quot;gambin&quot;</span>)
-
-##unimodal model
-fit =<span class="st"> </span><span class="kw">fit_abundances</span>(moths)
-fit<span class="op">$</span>alpha</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(<span class="st">&quot;gambin&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">data</span>(moths, <span class="dt">package=</span><span class="st">&quot;gambin&quot;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co">##unimodal model</span></a>
+<a class="sourceLine" id="cb1-5" title="5">fit =<span class="st"> </span><span class="kw">fit_abundances</span>(moths)</a>
+<a class="sourceLine" id="cb1-6" title="6">fit<span class="op">$</span>alpha</a></code></pre></div>
 <pre><code>## [1] 1.644694</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(fit)
-<span class="kw">points</span>(fit)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">barplot</span>(fit)</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">points</span>(fit)</a></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">AIC</span>(fit)</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">AIC</span>(fit)</a></code></pre></div>
 <pre><code>## [1] 803.6409</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">##unimodal model (fit to a subsample of 1000 individuals)
-fit2 =<span class="st"> </span><span class="kw">fit_abundances</span>(moths, <span class="dt">subsample =</span> <span class="dv">1000</span>)
-fit2<span class="op">$</span>alpha</code></pre></div>
-<pre><code>## [1] 1.104677</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(fit2)
-<span class="kw">points</span>(fit2)</code></pre></div>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAAEgCAMAAAAjXV6yAAAAV1BMVEUAAAAAADoAAGYAOpAAZrY6AAA6ADo6OpA6kNtmAABmADpmZmZmtv+QOgCQZgCQ2/+2ZgC225C2/7a2//++vr7bkDrb2//b////tmb/25D//7b//9v///8m26yfAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAIl0lEQVR4nO2di5KjNhBFmYeT8SbOOLtLjG3+/zujB2BhjG4DAoS4p2qqdj22DGek1oMWZCXxkq19ALFDQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBDgIeh2/CrzLPu4rHg0EfIQdP64XA+f5flzxaOJkEbQ7fh3WWTq5/3XmscTHS1BZyUnp6AWThP7vB0/Lrcjm1gLN0hnb9/3E/20YTcPoCCAI0i1sY/L+Wu9Y4mSh6Di7TvXQZqGWjSC7ic1kFbDaHbzbVrjIC1o1EAxawh5bFHQqUHnSZOxhAVVMShXs40gxZWmXk0pKw7avVimxoqhijP/3r6hwGeQPf9z84YoCEBBAHsCanhoIpBm0jho7zHofgISk+7FMHlWzUOKrGdCkoCRJ5wz0kPE3jPX6LFkRd4znExZkB1C+1YU9Wykom9CkrCg+uw9c7F916D67H2z+WYeAmJQ9kSgY12Fx8Hbs78efOtB9Vigd0JbCfrdIhFByk2ouViigqaU0m5NXUHbbXQjDrXw1LNeQZutU8MW7c9Z9nX98+J2+K+KS1OQYNFeD5XOpvb4u/kkBQkW7U29uf6hBfkHikkKEiza29p1/6/cdQ3yLdo3tau3ISYsSLRon9vuq+h9U8qCAi7aJyooXHG9gtRfgILKfkFZ9bNRQaaJTUxy9QpyLE36kkVpBemyCcPTiktS0P1ke6YQ1+aTFHT7YavOtDTghGNQXYP6xshDikuzF7Ojv3HZHXg9qPPKVnDmYo+zHN/KEhYUsjgKAsWlKSjIdqiUBQXZDpWwoDDboRIXBLdDCdNfkhQk2Q4lTX9JUxDeDiVOXkhTEEac/rJXQaxBCHH6i0DQVq7WDzuw0ekv261Tq001tiVIhd96wWxcKcOXO7Ym6EskSM3VbBjqG06mKsicOV4M0iv6diS5O0GPNWkPtpu/nzw5IAkLElAPFNW8P5SgepF6E4JgEmczUDx/BhLUXObYgiA7+PMu2tda1HAoiKDHxaANCGoSyX1LirW++2l/ggRbEcTFJSlIVIOExe02BkmL22svJi5ur+MgcXEUBIqjIFAcBYHiKKhTSurrQWVrRX5ycUkK6t3hNKK4JAWFuUfpFEFxXuZwatDk9LJyoqAoq1REvRgFiV6JLRHWOQ7BntWA6S9ofh+fIMGe1ZDpL2iFKDpBgj2rQZMXNidItGc1YPrL5gQJ9qwuUIPij0H+qxoh0196Xom7F0MrirOmv3ActGNBQZY7ohc0+57VjQuq9ovNuGd124LqPtzTzQu2lCUsSHLpufeS/FNxYQWtuzbk1CCbY++99AyfSzKDoKwsQ/e1Q3BjkG5jhT8G9d/WxC0upKDs6TCXxn5zmA2rZbqCAhdHQaC4NGNQ3cwia2IR9WIhnm64g3FQiOKSFLT+peeOoL4dU4u2ucdX2RskBikulKDOW5rvWM6QI+gQW5B+LWjhfr8z1RhXyizrQXEJijBIxyUoxiD9UtB6MWgDQXqFfs1pYtFNViUfar51LkMxz8WkgmaNShQkOqNy003slaBgUem5mImZirHEoHBRqVPKUnegCimoU18C1qnOh5bcUBdMUM9hPL80xlDnM9Oe1ButoNGB/Pkj3jtQSYtbUFDP0NGtL32jyyFnVAoyWzTzJ3FO+9DLqGTeYt+X/fZUOyBIwvxJnMEEucf0cNP3Fg9D3r5ECt5sgsamrtm3yy4c9idxPq8HdVr9iFdGFiP50HBBD86ep0AKalB6tAWpmuR97ghM4kyPlqACTcREXV1auILyPZ24lIcgNcbZTbsZgDtQDLFqnxy1IBh+9kolKM8mTcESZshAcZfMtJKbDhQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAgwn6AC3vfUXKcVrGKiR7/qDG+0WtM8rmAoswnSWxf92xfvJ/VrwUJUAZbKC/VrlFKgN3Oj3ZKvmUuQvYbmTTa6Hsw+dLT+ZO77BL/JX4zNkh+V+jSXIOHZw02y+hrlP15BkvTlGAWZwxZkY53BW1RB/hhUvP88wlAWXxOzFQNWD3iNVjcgv6BcLxLDnSa4y+hhZUEFitHgnk9lfTMNUFd1Pb0exlz3W7eJwWv8phggyHyHjXm9xUgjYpdVg3QOR0H1M4c8Z2//CP5QLW3wL1ixmxc/YMBfg2zWkr+u2j/XqATeFQeK4pgARtI6TKHNXPHFINM6/FW6aj643qOpRiGYsZxls5ounKwCKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQEoCEBBAAoCUBCAggAUBKAgAAUBKAhAQYB4BJnbNbfSPYoYNvJHI8jkwlwPTr5MmPsTTyUWQVUClPsUUwpyqVOtzI2JdGLMp25yOkHRNLwqA8pknts8lm6LnIdIBDU1xzhQP+oFU4O0OPX/KtH546J/pzOhjLFxib3DiEZQdarqxGtZ+rXbj2+bQKezHY0084Sm919BHv4uIUJBdcJq88Qz3ZT0f1Ttskl9xuJChqIR9GhidcKqEaRCzvu/B9vWVAsrmqxXs1VoPzHIDdJuDTL/tvHm/aetRO6Hpj2QUUQsgioruia5MciEGhOLb8e/TBhyK80SA4FYBLkDRd1TqW5Li9LebkfTr5+z+ne65piqNCozfCDRCHIHNmYcpJXoZ09nb9+mKVV9el7d4qgQZRBPJx5BkUJBAAoCUBCAggAUBKAgAAUBKAhAQQAKAlAQgIIAFASgIAAFASgIQEEACgJQEICCABQEoCAABQH+B3387yWk4ENbAAAAAElFTkSuQmCC" /><!-- --></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">AIC</span>(fit2)</code></pre></div>
-<pre><code>## [1] 371.7501</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">##bimodal model (using 3 cores)
-
-<span class="co">#simulate bimodal gambin distribution</span>
-x1 =<span class="st"> </span><span class="kw">rgambin</span>(<span class="dv">600</span>, <span class="dv">5</span>, <span class="dv">10</span>)
-x2 =<span class="st"> </span><span class="kw">rgambin</span>(<span class="dv">300</span>, <span class="dv">1</span>, <span class="dv">10</span>)
-x =<span class="st"> </span><span class="kw">table</span>(<span class="kw">c</span>(x1,x2))
-freq =<span class="st"> </span><span class="kw">as.vector</span>(x)
-values =<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">as.character</span>(<span class="kw">names</span>(x)))
-abundances =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">octave=</span>values, <span class="dt">species =</span> freq)
-
-<span class="co">#fit bimodal model to simulated data</span>
-fit3 =<span class="st"> </span><span class="kw">fit_abundances</span>(abundances, <span class="dt">no_of_components =</span> <span class="dv">2</span>, <span class="dt">cores =</span> <span class="dv">1</span>)</code></pre></div>
-<pre><code>## Using 1 core. Your machine has 24 available.</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(fit3)
-<span class="kw">points</span>(fit3)</code></pre></div>
-<p><img src="data:image/png;base64,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" /><!-- --></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">AIC</span>(fit3)</code></pre></div>
-<pre><code>## [1] 4039.441</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#compare with AIC of unimodal model</span>
-<span class="kw">AIC</span>(<span class="kw">fit_abundances</span>(abundances))</code></pre></div>
-<pre><code>## [1] 4064.712</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#fit a bimodal model to a species classification dataset</span>
-<span class="co">#and calculate the number of the differet categories in each octave</span>
-<span class="kw">data</span>(categ, <span class="dt">package=</span><span class="st">&quot;gambin&quot;</span>)
-fits2 =<span class="st"> </span><span class="kw">fit_abundances</span>(categ<span class="op">$</span>abundances, <span class="dt">no_of_components =</span> <span class="dv">2</span>)</code></pre></div>
-<pre><code>## Using 1 core. Your machine has 24 available.</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#without species classification data</span>
-d1 &lt;-<span class="st"> </span><span class="kw">deconstruct_modes</span>(fits2, <span class="dt">dat =</span> categ, <span class="dt">peak_val =</span> <span class="ot">NULL</span>, <span class="dt">abundances =</span> <span class="st">&quot;abundances&quot;</span>, 
-     <span class="dt">species =</span> <span class="st">&quot;species&quot;</span>, <span class="dt">categ =</span> <span class="st">&quot;status&quot;</span>, <span class="dt">col.statu =</span> <span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>))</code></pre></div>
-<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co">##unimodal model (fit to a subsample of 1000 individuals)</span></a>
+<a class="sourceLine" id="cb6-2" title="2">fit2 =<span class="st"> </span><span class="kw">fit_abundances</span>(moths, <span class="dt">subsample =</span> <span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb6-3" title="3">fit2<span class="op">$</span>alpha</a></code></pre></div>
+<pre><code>## [1] 0.8625607</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">barplot</span>(fit2)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="kw">points</span>(fit2)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">AIC</span>(fit2)</a></code></pre></div>
+<pre><code>## [1] 399.9422</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co">##bimodal model (using 3 cores)</span></a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="co">#simulate bimodal gambin distribution</span></a>
+<a class="sourceLine" id="cb11-4" title="4">x1 =<span class="st"> </span><span class="kw">rgambin</span>(<span class="dv">600</span>, <span class="dv">5</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb11-5" title="5">x2 =<span class="st"> </span><span class="kw">rgambin</span>(<span class="dv">300</span>, <span class="dv">1</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb11-6" title="6">x =<span class="st"> </span><span class="kw">table</span>(<span class="kw">c</span>(x1,x2))</a>
+<a class="sourceLine" id="cb11-7" title="7">freq =<span class="st"> </span><span class="kw">as.vector</span>(x)</a>
+<a class="sourceLine" id="cb11-8" title="8">values =<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">as.character</span>(<span class="kw">names</span>(x)))</a>
+<a class="sourceLine" id="cb11-9" title="9">abundances =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">octave=</span>values, <span class="dt">species =</span> freq)</a>
+<a class="sourceLine" id="cb11-10" title="10"></a>
+<a class="sourceLine" id="cb11-11" title="11"><span class="co">#fit bimodal model to simulated data</span></a>
+<a class="sourceLine" id="cb11-12" title="12">fit3 =<span class="st"> </span><span class="kw">fit_abundances</span>(abundances, <span class="dt">no_of_components =</span> <span class="dv">2</span>, <span class="dt">cores =</span> <span class="dv">1</span>)</a></code></pre></div>
+<pre><code>## Using 1 core. Your machine has 12 available.</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">barplot</span>(fit3)</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="kw">points</span>(fit3)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">AIC</span>(fit3)</a></code></pre></div>
+<pre><code>## [1] 4054.182</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="co">#compare with AIC of unimodal model</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="kw">AIC</span>(<span class="kw">fit_abundances</span>(abundances))</a></code></pre></div>
+<pre><code>## [1] 4078.932</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co">#fit a bimodal model to a species classification dataset</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="co">#and calculate the number of the differet categories in each octave</span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="kw">data</span>(categ, <span class="dt">package=</span><span class="st">&quot;gambin&quot;</span>)</a>
+<a class="sourceLine" id="cb18-4" title="4">fits2 =<span class="st"> </span><span class="kw">fit_abundances</span>(categ<span class="op">$</span>abundances, <span class="dt">no_of_components =</span> <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## Using 1 core. Your machine has 12 available.</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">d1 &lt;-<span class="st"> </span><span class="kw">deconstruct_modes</span>(fits2, <span class="dt">dat =</span> categ, <span class="dt">peak_val =</span> <span class="ot">NULL</span>, <span class="dt">abundances =</span> <span class="st">&quot;abundances&quot;</span>, </a>
+<a class="sourceLine" id="cb20-2" title="2">     <span class="dt">species =</span> <span class="st">&quot;species&quot;</span>, <span class="dt">categ =</span> <span class="st">&quot;status&quot;</span>, <span class="dt">col.statu =</span> <span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>),</a>
+<a class="sourceLine" id="cb20-3" title="3">     <span class="dt">plot_legend =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co">#do the same but don&#39;t provide category data - this just highlights the modal octaves</span></a>
+<a class="sourceLine" id="cb21-2" title="2">d2 &lt;-<span class="st"> </span><span class="kw">deconstruct_modes</span>(fits2, <span class="dt">dat =</span> categ, <span class="dt">peak_val =</span> <span class="ot">NULL</span>, <span class="dt">abundances =</span> <span class="st">&quot;abundances&quot;</span>, </a>
+<a class="sourceLine" id="cb21-3" title="3">     <span class="dt">species =</span> <span class="st">&quot;species&quot;</span>, <span class="dt">categ =</span> <span class="ot">NULL</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2>References</h2>
 <div id="refs" class="references">
 <div id="ref-antao2017">
-<p>Antao, Laura H., Sean R. Connolly, Anne E. Magurran, Amadeu Soares, and Maria Dornelas. 2017. “Prevalence of Multimodal Species Abundance Distributions Is Linked to Spatial and Taxonomic Breadth.” <em>Global Ecology and Biogeography</em> 26 (2): 203–15. doi:<a href="https://doi.org/10.1111/geb.12532">10.1111/geb.12532</a>.</p>
+<p>Antao, Laura H., Sean R. Connolly, Anne E. Magurran, Amadeu Soares, and Maria Dornelas. 2017. “Prevalence of Multimodal Species Abundance Distributions Is Linked to Spatial and Taxonomic Breadth.” <em>Global Ecology and Biogeography</em> 26 (2): 203–15. <a href="https://doi.org/10.1111/geb.12532">https://doi.org/10.1111/geb.12532</a>.</p>
 </div>
 <div id="ref-arellano2017">
 <p>Arellano, Gabriel, Maria N. Umana, Manuel J. Macía, M. Isabel Loza, Alfredo Fuentes, Victoria Cala, and Peter M. Jorgensen. 2017. “The Role of Niche Overlap, Environmental Heterogeneity, Landscape Roughness and Productivity in Shaping Species Abundance Distributions Along the Amazon–Andes Gradient.” <em>Global Ecology and Biogeography</em> 26 (2): 191–202.</p>
 </div>
 <div id="ref-gray2006">
-<p>Gray, John S., Anders Bjorgesaeter, and Karl. I. Ugland. 2006. “On Plotting Species Abundance Distributions.” <em>Journal of Animal Ecology</em> 75 (3). [Wiley, British Ecological Society]: 752–56.</p>
-</div>
-<div id="ref-matthews2014gambin">
-<p>Matthews, Thomas J, Michael K Borregaard, Karl I Ugland, Paulo AV Borges, Francois Rigal, Pedro Cardoso, and Robert J Whittaker. 2014. “The Gambin Model Provides a Superior Fit to Species Abundance Distributions with a Single Free Parameter: Evidence, Implementation and Interpretation.” <em>Ecography</em> 37 (10). Wiley Online Library: 1002–11.</p>
+<p>Gray, John S., Anders Bjorgesaeter, and Karl. I. Ugland. 2006. “On Plotting Species Abundance Distributions.” <em>Journal of Animal Ecology</em> 75 (3): 752–56.</p>
 </div>
 <div id="ref-Matthews2019">
-<p>Matthews, Thomas J., Michael K. Borregaard, Colin S. Gillespie, Francois Rigal, Karl I. Ugland, Rodrigo Ferreira Kruger, Roberta Marques, et al. 2019. “Extension of the Gambin Model to Multimodal Species Abundance Distributions.” Journal Article. <em>Methods in Ecology and Evolution</em> 0 (0). doi:<a href="https://doi.org/doi:10.1111/2041-210X.13122">doi:10.1111/2041-210X.13122</a>.</p>
+<p>Matthews, Thomas J., Michael K. Borregaard, Colin S. Gillespie, Francois Rigal, Karl I. Ugland, Rodrigo Ferreira Kruger, Roberta Marques, et al. 2019. “Extension of the Gambin Model to Multimodal Species Abundance Distributions.” Journal Article. <em>Methods in Ecology and Evolution</em> 10: 432–37. <a href="https://doi.org/doi:10.1111/2041-210X.13122">https://doi.org/doi:10.1111/2041-210X.13122</a>.</p>
+</div>
+<div id="ref-matthews2014gambin">
+<p>Matthews, Thomas J, Michael K Borregaard, Karl I Ugland, Paulo AV Borges, Francois Rigal, Pedro Cardoso, and Robert J Whittaker. 2014. “The Gambin Model Provides a Superior Fit to Species Abundance Distributions with a Single Free Parameter: Evidence, Implementation and Interpretation.” <em>Ecography</em> 37 (10): 1002–11.</p>
 </div>
 <div id="ref-ugland2007modelling">
-<p>Ugland, Karl I, P John D Lambshead, Brian McGill, John S Gray, Niall O’Dea, Richard J Ladle, and Robert J Whittaker. 2007. “Modelling Dimensionality in Species Abundance Distributions: Description and Evaluation of the Gambin Model.” <em>Evolutionary Ecology Research</em> 9 (2). Evolutionary Ecology, Ltd.: 313–24.</p>
+<p>Ugland, Karl I, P John D Lambshead, Brian McGill, John S Gray, Niall O’Dea, Richard J Ladle, and Robert J Whittaker. 2007. “Modelling Dimensionality in Species Abundance Distributions: Description and Evaluation of the Gambin Model.” <em>Evolutionary Ecology Research</em> 9 (2): 313–24.</p>
 </div>
 </div>
 </div>
